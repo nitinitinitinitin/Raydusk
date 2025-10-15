@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Raydusk</class>
+ <widget class="QMainWindow" name="Raydusk">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,11 +16,14 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
+     <widget class="QWidget" name="widget" native="true"/>
+    </item>
+    <item>
      <widget class="QSplitter" name="splitter">
       <property name="orientation">
        <enum>Qt::Orientation::Horizontal</enum>
       </property>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="CameraPreview" native="true">
        <property name="styleSheet">
         <string notr="true">background-color: #505050
 
@@ -60,6 +63,13 @@
     <property name="title">
      <string>Layout</string>
     </property>
+    <addaction name="actionCalibrate"/>
+    <addaction name="actionCreate"/>
+    <addaction name="actionCapture"/>
+    <addaction name="actionEdit"/>
+    <addaction name="separator"/>
+    <addaction name="actionCreate_Layout"/>
+    <addaction name="actionDelete_Layout"/>
    </widget>
    <widget class="QMenu" name="menuhelp">
     <property name="title">
@@ -72,7 +82,36 @@
    <addaction name="menuLayout"/>
    <addaction name="menuhelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCalibrate">
+   <property name="text">
+    <string>Calibrate</string>
+   </property>
+  </action>
+  <action name="actionCreate">
+   <property name="text">
+    <string>Create</string>
+   </property>
+  </action>
+  <action name="actionCapture">
+   <property name="text">
+    <string>Capture</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionCreate_Layout">
+   <property name="text">
+    <string>Create Layout</string>
+   </property>
+  </action>
+  <action name="actionDelete_Layout">
+   <property name="text">
+    <string>Delete Layout</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
